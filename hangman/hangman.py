@@ -12,9 +12,9 @@ def get_valid_word(words):
 
 # Function for the game logic
 def hangman():
-    word = get_valid_word(words)
+    word = get_valid_word(words).lower()
     word_letters = set(word) 
-    alphabet = set(string.ascii_uppercase)
+    alphabet = set(string.ascii_lowercase)
     used_letters = set() 
     lives = 10
     
@@ -29,7 +29,7 @@ def hangman():
         print('Current word: ', ' '.join(word_list))
         
         # Get user's guess
-        user_letter = input('Guess a letter: ').upper()
+        user_letter = input('Guess a letter: ').lower()
         
         # Checks if the guessed letter is in alphabet but not in the set of letters already guessed
         if user_letter in alphabet - used_letters:
