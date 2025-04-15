@@ -16,7 +16,7 @@ def hangman():
     word_letters = set(word) 
     alphabet = set(string.ascii_lowercase)
     used_letters = set() 
-    lives = 20
+    lives = 10
     
     # Play the game until word_letters or lives reaches 0
     while len(word_letters) > 0 and lives > 0:
